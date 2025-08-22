@@ -1,0 +1,103 @@
+:root {
+    --mainEng-font: "Inter", "Roboto";
+    --mainKor-font: "Pretendard", "Apple SD Gothic Neo";
+    --mainNum-font: "JetBrains Mono", "Fira Code";
+    --code-font: "JetBrains Mono", "Fira Code", monospace;
+  
+    // IT 포트폴리오용 현대적 색상 팔레트
+    --mainBg-color: #0a0a0a;           // 다크 배경
+    --secondaryBg-color: #111111;      // 섹션 배경
+    --cardBg-color: #1a1a1a;           // 카드 배경
+    
+    // 그라디언트 배경들
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-tech: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    
+    // 서브 배경 색상들 (IT 테마)
+    --subBg100: #1e1e1e;              // 차분한 그레이
+    --subBg200: #2d2d2d;              // 중간 그레이  
+    --subBg300: #3d3d3d;              // 밝은 그레이
+    --subBg400: #4d4d4d;              // 더 밝은 그레이
+    --subBg500: #5d5d5d;              // 가장 밝은 그레이
+    
+    // 액센트 컬러들
+    --primary-color: #00d4ff;          // 시안 블루 (기술적)
+    --secondary-color: #ff6b6b;        // 코랄 (강조용)
+    --accent-color: #4ecdc4;           // 터콰이즈 (포인트)
+    --warning-color: #ffd93d;          // 노랑 (경고/알림)
+    --success-color: #6bcf7f;          // 그린 (성공)
+    
+    // 텍스트 색상들
+    --white: #ffffff;
+    --black: #000000;
+    --text-primary: #f8f9fa;           // 메인 텍스트
+    --text-secondary: #adb5bd;         // 서브 텍스트
+    --text-muted: #6c757d;             // 음소거된 텍스트
+    --text-dark: #212529;              // 다크 텍스트
+    
+    // 기존 호환성 유지
+    --black100: #2b2b2b;
+    --black200: #434343;
+    --black300: #686868;
+    --black400: #e0e0e0;
+
+    font-family: var(--mainEng-font), var(--mainKor-font), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+    
+    // 더 나은 텍스트 렌더링
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    
+    // 스무스 스크롤
+    scroll-behavior: smooth;
+
+    @media (max-width: 800px) {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    @media (max-width: 480px) {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+}
+
+// 반응형 브레이크포인트 변수들
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-large: 1200px;
+$breakpoint-xl: 1400px;
+
+// 레거시 브레이크포인트 (기존 800px 유지)
+$breakpoint-legacy: 800px;
+
+// 애니메이션 변수들
+$transition-fast: 0.15s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// 그림자 변수들
+$shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.15);
+$shadow-large: 0 8px 16px rgba(0, 0, 0, 0.2);
+$shadow-glow: 0 0 20px rgba(0, 212, 255, 0.3);
+  
+body {
+    background: var(--mainBg-color);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    font-feature-settings: "liga" 1, "kern" 1;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+                        

@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+// setting
+@use "fonts";
+@use "vars" as *;   // 변수, mixin 바로 사용
+@use "reset";
+@use "mixin" as *;

@@ -1,0 +1,74 @@
+// 가운데 정렬
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+// 양쪽 정렬
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// 중앙 정렬
+@mixin position-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// 상단 고정
+@mixin position-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+// 반응형 미디어쿼리 mixin들
+@mixin mobile {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 481px) and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile-tablet {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 769px) {
+        @content;
+    }
+}
+
+@mixin large-desktop {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+// 레거시 브레이크포인트 (기존 800px 유지)
+@mixin legacy-mobile {
+    @media (max-width: 800px) {
+        @content;
+    }
+}
+
+// 커스텀 브레이크포인트
+@mixin respond-to($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}   
