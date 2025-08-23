@@ -17,7 +17,6 @@ import { headerNav } from "@/constants/index";
                     <li v-for="(nav, key) in headerNav" :key="key">
                         <a :href="nav.url" @click="scrollLink($event)">
                             {{ nav.title }}
-                            <span class="hover-text">test입니다</span>
                         </a>
                     </li> 
                 </ul> 

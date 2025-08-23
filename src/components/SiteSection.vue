@@ -68,9 +68,9 @@ import genieImg from "@/assets/img/job/genie.png";
 .site__inner {
     padding: 16px;
     
-    /* 충분한 스크롤 공간 확보 */
+    /* 적절한 하단 여백 */
     .site__wrap {
-        padding-bottom: 100vh; /* 마지막 카드가 완전히 표시되도록 */
+        padding-bottom: 50px; /* 적절한 하단 여백 */
     }
 
     /* 사이트 섹션 제목 스타일링 */
