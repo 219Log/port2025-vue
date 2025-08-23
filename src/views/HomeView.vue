@@ -1,6 +1,6 @@
 <script setup>
 import HeaderSection from "@/components/HeaderSection.vue";
-import FooterSection from "@/components/FooterSection.vue";
+// import FooterSection from "@/components/FooterSection.vue"; // 임시 주석 처리
 import IntroSection from "@/components/IntroSection.vue";
 import SkillSection from "@/components/SkillSection.vue";
 import SiteSection from "@/components/SiteSection.vue";
@@ -19,5 +19,5 @@ import SkipSection from "@/components/SkipSection.vue";
         <PortSection />
         <ContactSection />
     </main>
-    <FooterSection />
+    <!-- <FooterSection /> --> <!-- 임시 주석 처리 -->
 </template>

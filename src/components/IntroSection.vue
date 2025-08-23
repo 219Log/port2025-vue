@@ -8,7 +8,7 @@ import { ref } from 'vue';
 // 이미지 처리 관련 설명
 // 이미지도 번들러 추적을 위해 import 후 바인딩 권장
 // 별칭 안 쓰면 "../assets/img/about.jpg"
-import aboutImg from "@/assets/img/about.jpg";
+import aboutImg from "@/assets/img/info/about.jpg";
 
 // 호버 상태를 관리하는 변수
 const isHover = ref(false);

@@ -1,7 +1,7 @@
 <script setup>
 // Vue 생명주기 훈상 불러오기
 import { onMounted, onUnmounted } from "vue";
-// 포트폴리오 데이터 불러오기
+// 학습 자료 데이터 불러오기
 import { portText } from "@/constants/index";
 // GSAP 애니메이션 라이브러리 불러오기
 import { gsap } from "gsap";
@@ -60,31 +60,31 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <!-- 포트폴리오 섹션: 가로 스크롤 효과로 작업물을 보여주는 섹션 -->
+    <!-- 학습 자료 섹션: 가로 스크롤 효과로 작업물을 보여주는 섹션 -->
     <section id="port">
-        <!-- 포트폴리오 내부 컨테이너 -->
+        <!-- 학습 자료 내부 컨테이너 -->
         <div class="port__inner">
-            <!-- 포트폴리오 섹션 제목 -->
+            <!-- 학습 자료 섹션 제목 -->
             <div class="port__title">
-                portfolio <em>포폴 작업물</em>
+                study <em>학습 자료 모음</em>
             </div>
-            <!-- 포트폴리오 아이템 리스트 컨테이너 (가로 스크롤 영역) -->
+            <!-- 학습 자료 아이템 리스트 컨테이너 (가로 스크롤 영역) -->
             <div class="port__wrap">
-                <!-- 각 포트폴리오 아이템을 반복하여 표시 -->
+                <!-- 각 학습 자료 아이템을 반복하여 표시 -->
                 <div
                     v-for="(port, key) in portText"
                     :key="key"
                     :class="['port__item', `p${key + 1}`]"
                 >
-                    <!-- 포트폴리오 번호 -->
+                    <!-- 학습 자료 번호 -->
                     <span class="num">{{ port.num }}.</span>
-                    <!-- 포트폴리오 이미지 링크 -->
+                    <!-- 학습 자료 이미지 링크 -->
                     <a :href="port.view" target="_blank" class="img">
                         <img :src="port.img" :alt="port.title" />
                     </a>
-                    <!-- 포트폴리오 제목 -->
+                    <!-- 학습 자료 제목 -->
                     <h3 class="title">{{ port.title }}</h3>
-                    <!-- 포트폴리오 설명 -->
+                    <!-- 학습 자료 설명 -->
                     <p class="desc">{{ port.desc }}</p>
                     <!-- 사이트 보기 버튼 -->
                     <a :href="port.view" target="_blank" class="site">사이트 보기</a>
@@ -96,17 +96,17 @@ onUnmounted(() => {
 
 <style lang="scss">
     // 핵심 변경사항: React 버전과 동일하게 CSS를 구성합니다.
-    /* 포트폴리오 섹션 기본 스타일링 */
+    /* 학습 자료 섹션 기본 스타일링 */
     #port {
         width: 100%; /* 전체 너비 차지 */
         margin-top: 30vh; /* 상단 여백 */
         overflow: hidden; // 가로 스크롤바가 보이지 않도록 함
     }
-    /* 포트폴리오 내부 컨테이너 스타일링 */
+    /* 학습 자료 내부 컨테이너 스타일링 */
     .port__inner {
         padding: 16px; /* 내부 여백 */
     }
-    /* 포트폴리오 제목 스타일링 */
+    /* 학습 자료 제목 스타일링 */
     .port__title {
         position: relative; // pin이 적용된 섹션 내에서 z-index가 작동하도록
         z-index: 10;       // 스크롤되는 아이템들보다 위에 있도록 설정
@@ -122,13 +122,13 @@ onUnmounted(() => {
         margin-bottom: 16px; /* 하단 여백 */
         text-indent: -0.26vw; /* 들여쓰기 조정 */
     }
-    /* 포트폴리오 제목 내 강조 텍스트 */
+    /* 학습 자료 제목 내 강조 텍스트 */
     .port__title em {
         font-size: 1.25rem; /* 고정 크기 */
         font-weight: 400; /* 일반 굵기 */
         line-height: 2; /* 줄간격 */
     }
-    /* 포트폴리오 아이템 리스트 컨테이너 */
+    /* 학습 자료 아이템 리스트 컨테이너 */
     .port__wrap {
         display: flex; /* 플렉스박스 레이아웃 */
         flex-wrap: nowrap; // 아이템들이 한 줄로 나열되도록
@@ -145,7 +145,7 @@ onUnmounted(() => {
             width: 100%;
         }
     }
-    /* 각 포트폴리오 아이템 */
+    /* 각 학습 자료 아이템 */
     .port__item {
         flex-shrink: 0;
         width: 500px;
@@ -196,7 +196,7 @@ onUnmounted(() => {
     }
 
     // 이하 나머지 스타일은 기존과 동일하게 유지
-    /* 각 포트폴리오 아이템의 배경과 테마 지정 */
+    /* 각 학습 자료 아이템의 배경과 테마 지정 */
     .port__item.p1 { 
       background: var(--cardBg-color); 
       border: 1px solid rgba(0, 212, 255, 0.2);
@@ -255,7 +255,14 @@ onUnmounted(() => {
     /* 호버 시 이미지 위치 애니메이션 */
     .port__item:hover .img { margin-top: 0; /* 위로 올라가는 효과 */ }
     /* 이미지 스타일링 */
-    .port__item .img img { border-radius: 5px; filter: saturate(0%); /* 회색으로 표시 */ transition: all 0.3s; }
+    .port__item .img img { 
+        width: 100%; 
+        height: 200px; 
+        object-fit: contain; 
+        border-radius: 5px; 
+        filter: saturate(0%); /* 회색으로 표시 */ 
+        transition: all 0.3s; 
+    }
     /* 이미지 호버 효과 */
     .port__item .img:hover img { filter: saturate(100%) /* 커러로 변환 */ }
     /* 제목 스타일링 */

@@ -25,7 +25,13 @@
                 <div class="text">
                     <!-- 각 컨택트 링크를 반복하여 표시 -->
                     <div v-for="(contact, key) in contactText" :key="key">
-                        <a :href="contact.link" target="_blank">{{ contact.title }}</a>
+                        <a 
+                            :href="contact.link" 
+                            :target="contact.download ? '_self' : '_blank'"
+                            :download="contact.download ? '' : null"
+                        >
+                            {{ contact.title }}
+                        </a>
                     </div>
                 </div>
             </div>

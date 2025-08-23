@@ -2,11 +2,11 @@
 // 사이트 섹션에 표시할 데이터를 가져옵니다
 import { siteText } from "@/constants/index";
 // 이미지들 import
-import syIbmsImg from "@/assets/img/sy_ibms.png";
-import syApplyImg from "@/assets/img/sy_apply.png";
-import syPmsImg from "@/assets/img/sy_pms.png";
-import rispecImg from "@/assets/img/rispec.png";
-import genieImg from "@/assets/img/genie.png";
+import syIbmsImg from "@/assets/img/job/sy_ibms.png";
+import syApplyImg from "@/assets/img/job/sy_apply.png";
+import syPmsImg from "@/assets/img/job/sy_pms.png";
+import rispecImg from "@/assets/img/job/rispec.png";
+import genieImg from "@/assets/img/job/genie.png";
 
 </script>
 
@@ -47,8 +47,7 @@ import genieImg from "@/assets/img/genie.png";
                             <img :src="genieImg" alt="GENIE" class="rd-portal-image" />
                         </div>
                         <!-- 사이트 제목 -->
-                        <h3>
-                            {{ site.title }}
+                        <h3 v-html="site.title">
                         </h3>
                         <!-- 코드와 뷰 버튼 -->
                         <div class="btn">

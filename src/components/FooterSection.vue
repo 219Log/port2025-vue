@@ -16,9 +16,9 @@ import { footerText } from "@/constants/index";
             <div class="footer__info">
                 <!-- 왼쪽 회원가입 섹션 -->
                 <div class="left">
-                    <!-- 회원가입 링크 -->
+                    <!-- 회원가입 링크 (임시 차단) -->
                     <div class="title">
-                        <a href="#">sign up</a>
+                        <a href="javascript:void(0)" @click.prevent="() => {}" style="cursor: not-allowed; opacity: 0.5; pointer-events: none;">sign up</a>
                     </div>
                     <p>회원가입을 하시면 댓글과 게시판 기능을 이용할 수 있습니다.</p>
                 </div>
@@ -27,9 +27,9 @@ import { footerText } from "@/constants/index";
                     <h3>social</h3>
                     <!-- 소셜 링크 리스트 -->
                     <ul>
-                        <!-- 각 소셜 링크를 반복하여 표시 -->
+                        <!-- 각 소셜 링크를 반복하여 표시 (임시 차단) -->
                         <li v-for="(footer, key) in footerText" :key="key">
-                            <a :href="footer.link">{{ footer.title }}</a>
+                            <a href="javascript:void(0)" @click.prevent="() => {}" style="cursor: not-allowed; opacity: 0.5; pointer-events: none;" title="임시 차단됨">{{ footer.title }}</a>
                             <em>{{ footer.desc }}</em>
                         </li>
                     </ul>
@@ -91,7 +91,7 @@ import { footerText } from "@/constants/index";
                 padding: 20px 0;
                 text-transform: uppercase; /* 대문자로 변환 */
                 font-weight: 700;
-                background: url(../../img/arrow.svg) no-repeat right 20px; /* 화살표 아이콘 */
+                /* background: url(../../img/arrow.svg) no-repeat right 20px; */ /* 화살표 아이콘 - 임시 차단 */
                 transition: all 0.3s; /* 호버 효과 애니메이션 */
 
                 /* 호버 효과 */
