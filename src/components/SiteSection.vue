@@ -76,7 +76,7 @@ import genieImg from "@/assets/img/job/genie.png";
     /* 사이트 섹션 제목 스타일링 */
     .site__title  {
         position: sticky; /* 스크롤 시 제목을 고정 */
-        top: 70px;
+        top: 71px;
         left: 0;
         width: 100%;
         height: auto;
