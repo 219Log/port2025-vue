@@ -8,6 +8,19 @@ import syPmsImg from "@/assets/img/job/sy_pms.png";
 import rispecImg from "@/assets/img/job/rispec.png";
 import genieImg from "@/assets/img/job/genie.png";
 
+// 팝업 윈도우 열기
+const openPopup = (url) => {
+    const popupWidth = 1200;
+    const popupHeight = 800;
+    const left = (window.screen.width - popupWidth) / 2;
+    const top = (window.screen.height - popupHeight) / 2;
+    
+    window.open(
+        url,
+        'detailPopup',
+        `width=${popupWidth},height=${popupHeight},left=${left},top=${top},resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,status=no`
+    );
+};
 </script>
 
 <template>
@@ -26,13 +39,13 @@ import genieImg from "@/assets/img/job/genie.png";
                     <span class="num">{{ key + 1 }}.</span>
                     <!-- 콘텐츠 영역 -->
                     <div class="content-box">
-                        <!-- 1번째 카드는 sy_ibms.png 이미지 -->
+                        <!-- 1번째 카드는 sy_apply.png 이미지 -->
                         <div v-if="key === 0" class="rd-portal-image-container">
-                            <img :src="syIbmsImg" alt="SY IBMS" class="rd-portal-image" />
-                        </div>
-                        <!-- 2번째 카드는 sy_apply.png 이미지 -->
-                        <div v-else-if="key === 1" class="rd-portal-image-container">
                             <img :src="syApplyImg" alt="SY Apply" class="rd-portal-image" />
+                        </div>
+                        <!-- 2번째 카드는 sy_ibms.png 이미지 -->
+                        <div v-else-if="key === 1" class="rd-portal-image-container">
+                            <img :src="syIbmsImg" alt="SY IBMS" class="rd-portal-image" />
                         </div>
                         <!-- 3번째 카드는 sy_pms.png 이미지 -->
                         <div v-else-if="key === 2" class="rd-portal-image-container">
@@ -51,8 +64,8 @@ import genieImg from "@/assets/img/job/genie.png";
                         </h3>
                         <!-- 코드와 뷰 버튼 -->
                         <div class="btn">
-                            <a :href="site.code">code</a>
-                            <a :href="site.view">view</a>
+                            <button @click="openPopup(site.code)" class="detail-btn">상세확인</button>
+                            <a v-if="key !== 1" :href="site.view" target="_blank">SITE</a>
                         </div>
                     </div>
                 </div>
@@ -76,7 +89,7 @@ import genieImg from "@/assets/img/job/genie.png";
     /* 사이트 섹션 제목 스타일링 */
     .site__title  {
         position: sticky; /* 스크롤 시 제목을 고정 */
-        top: 71px;
+        top: 70px;
         left: 0;
         width: 100%;
         height: auto;
@@ -445,6 +458,30 @@ import genieImg from "@/assets/img/job/genie.png";
                 }
             }
 
+            /* 상세확인 버튼 스타일링 */
+            .detail-btn {
+                padding: 17px 29px !important;
+                border-radius: 17px !important;
+                text-transform: uppercase !important;
+                font-size: 1.2rem !important;
+                font-weight: 600 !important;
+                letter-spacing: 0.72px !important;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+                border: 1px solid !important;
+                text-decoration: none !important;
+                backdrop-filter: blur(10px) !important;
+                background: linear-gradient(135deg, rgba(0, 212, 255, 0.9), rgba(0, 180, 216, 0.8)) !important;
+                color: rgba(255, 255, 255, 0.95) !important;
+                border-color: rgba(0, 212, 255, 0.6) !important;
+                box-shadow: 0 4px 16px rgba(0, 212, 255, 0.2) !important;
+                cursor: pointer;
+                
+                &:hover {
+                    transform: translateY(-2px) scale(1.05) !important;
+                    background: linear-gradient(135deg, rgba(0, 212, 255, 1), rgba(0, 180, 216, 0.9)) !important;
+                    box-shadow: 0 8px 24px rgba(0, 212, 255, 0.3) !important;
+                }
+            }
         }
     }
 }

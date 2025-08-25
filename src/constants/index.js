@@ -98,9 +98,20 @@ export const skillText = [
 
 export const siteText = [
   {
+    text: ["Public", "R&D Information", "Portal System"],
+    title: "한국과학창의재단 - <br>(차세대)External Project Management System",
+    code: "https://blossom-lavender-c87.notion.site/External-Project-Management-System-25a336a69612807cba4af74131428972?source=copy_link",
+    view: "https://pmsnew.kosac.re.kr/index.do",
+    info: [
+      "Government Project",
+      "Development Period : 6 months",
+      "Tech Stack : Java, Spring, Oracle, JSP",
+    ],
+  },
+  {
     text: ["make", "site compliant with", "webstandard"],
     title: "한국과학창의재단 - <br>(차세대)Internal Project Management System",
-    code: "https://github.com/webstoryboy/port2023-vite",
+    code: "https://blossom-lavender-c87.notion.site/Internal-Project-Management-System-25a336a69612804db30ed8d566361a9a?source=copy_link",
     view: "https://port2023-vite.netlify.app",
     info: [
       "site coding",
@@ -109,21 +120,10 @@ export const siteText = [
     ],
   },
   {
-    text: ["Public", "R&D Information", "Portal System"],
-    title: "한국과학창의재단 - <br>(차세대)External Project Management System",
-    code: "https://github.com/project/rd-portal",
-    view: "https://rd-portal-demo.com",
-    info: [
-      "Government Project",
-      "Development Period : 6 months",
-      "Tech Stack : Java, Spring, Oracle, JSP",
-    ],
-  },
-  {
     text: ["make", "site compliant with", "vue.js"],
     title: "한국과학창의재단<br>(차세대)온라인 접수 시스템",
-    code: "https://github.com/webstoryboy/port2023-vue",
-    view: "https://port2023-vue.netlify.app",
+    code: "https://blossom-lavender-c87.notion.site/25a336a6961280c09ecace45657d5cb1?source=copy_link",
+    view: "https://apply.kosac.re.kr/index.do",
     info: [
       "site coding",
       "production period : two days",
@@ -133,8 +133,8 @@ export const siteText = [
   {
     text: ["make", "site compliant with", "next.js"],
     title: "한국에너지기술평가원<br>(유지보수)연구과제 중복방지 시스템",
-    code: "https://github.com/webstoryboy/port2023-next",
-    view: "https://port2023-next.netlify.app",
+    code: "https://blossom-lavender-c87.notion.site/25a336a6961280c49edad74cab3dbebd?source=copy_link",
+    view: "https://rispec.kr/",
     info: [
       "site coding",
       "production period : two days",
@@ -144,8 +144,8 @@ export const siteText = [
   {
     text: ["Green Energy", "New Innovative", "Expert"],
     title: "한국에너지기술평가원<br>(고도화,유지보수)Project Management System",
-    code: "https://github.com/project/genie-system",
-    view: "https://genie-energy.com",
+    code: "https://blossom-lavender-c87.notion.site/Project-Management-System-25a336a6961280e5b7aff6d9d0601ea3?source=copy_link",
+    view: "https://genie.ketep.re.kr/",
     info: [
       "Energy System",
       "Development Period : 8 months",
