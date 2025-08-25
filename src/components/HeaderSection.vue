@@ -55,7 +55,20 @@ export default {
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
-                targetElement.scrollIntoView({ behavior: "smooth" });
+                // 헤더 높이 계산 (고정 헤더 높이 + 여유 공간)
+                const headerHeight = document.getElementById('header').offsetHeight;
+                const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 15;
+
+                // 부드러운 스크롤 실행
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: "smooth"
+                });
+            }
+
+            // 모바일 메뉴가 열려있다면 닫기
+            if (this.isNavVisible) {
+                this.isNavVisible = false;
             }
         },
     },

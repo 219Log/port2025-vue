@@ -43,9 +43,7 @@ const handleMouseLeave = () => {
       <div class="intro__text" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">
         <!-- 소개 텍스트 -->
         <div class="text" v-if="!isHover">
-          <div>{{ introText.desc[0] }}</div>
-          <div>{{ introText.desc[1] }}</div>
-          <div>{{ introText.desc[2] }}</div>
+          <div v-for="(text, index) in introText.desc" :key="index">{{ text }}</div>
         </div>
         <div class="textcontent" v-else>
           <div class="contact-item">
@@ -81,8 +79,9 @@ const handleMouseLeave = () => {
   width: 100%; height: 100%; /* 부모 요소 차지 */
   display: flex; align-items: flex-start; justify-content: flex-end; /* 하단 정렬 */
   flex-direction: column; padding: 16px; /* 세로 배치와 여백 */
-  overflow-x: hidden; /* 가로 스크롤 방지 */
+  overflow: hidden; /* 넘치는 내용 숨김 */
   max-width: 100vw; /* 뷰포트 너비 초과 방지 */
+  box-sizing: border-box; /* 패딩 포함한 크기 계산 */
 
   /* 모바일 화면에서의 정렬 조정 */
   @media (max-width: 800px){ 
@@ -92,10 +91,40 @@ const handleMouseLeave = () => {
 
   /* 소개 섹션 제목 스타일링 */
   .intro__title {
-    font-size: 10vw; text-transform: uppercase; line-height: 1; font-weight: 800; /* 크고 굵게 */
-    white-space: nowrap; text-indent: -0.5vw; letter-spacing: -0.3vw; /* 줄바꿈 방지와 글자 간격 조정 */
+    font-size: clamp(2rem, 7vw, 8rem); /* 최소 2rem, 기본 7vw, 최대 8rem */
+    text-transform: uppercase; 
+    line-height: 0.9; 
+    font-weight: 800;
+    text-indent: -0.5vw; 
+    letter-spacing: -0.3vw;
+    max-width: 100%; /* 최대 너비 제한 */
+    overflow: hidden; /* 넘치는 부분 숨김 */
+    
+    /* 큰 화면에서는 한 줄로 */
+    @media (min-width: 768px) {
+      white-space: nowrap;
+    }
+    
+    /* 작은 화면에서는 두 줄 허용 */
+    @media (max-width: 767px) {
+      white-space: normal;
+      word-break: break-word;
+      font-size: clamp(1.8rem, 8vw, 4rem);
+      text-align: center;
+      text-indent: 0;
+    }
+    
+    /* 매우 작은 화면에서 추가 조정 */
+    @media (max-width: 480px) { 
+      font-size: clamp(1.5rem, 9vw, 3rem);
+      letter-spacing: -0.1vw;
+      line-height: 0.8;
+    }
+    
     /* 아주 작은 화면에서는 제목 숨김 */
-    @media (max-width: 320px){ display: none; }
+    @media (max-width: 320px){ 
+      display: none; 
+    }
   }
 
   /* 소개 텍스트 영역 스타일링 */
@@ -146,6 +175,8 @@ const handleMouseLeave = () => {
         &:nth-child(1) { animation-delay: 0.1s; }
         &:nth-child(2) { animation-delay: 0.3s; }
         &:nth-child(3) { animation-delay: 0.5s; }
+        &:nth-child(4) { animation-delay: 0.7s; }
+        &:nth-child(5) { animation-delay: 0.9s; }
       }
 
       /* 태블릿에서 크기 조정 */

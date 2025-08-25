@@ -9,7 +9,7 @@ import { skillText } from "@/constants/index";
         <div class="skill__inner">
             <!-- 섹션 제목 -->
             <h2 class="skill__title">
-                Challenge <em>나의 도전</em>
+                Cover Letter <em>이력사항</em>
             </h2>
             <!-- 스킬 설명 리스트 -->
             <div class="skill__desc">

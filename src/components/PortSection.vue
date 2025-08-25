@@ -57,6 +57,16 @@ onUnmounted(() => {
     if (ctx) ctx.revert(); // GSAP 애니메이션 정리
     window.removeEventListener('load', setupAnimation); // 이벤트 리스너 제거
 });
+
+// 상세내용 버튼 클릭 시 새 창에서 열기
+const openDetail = (url) => {
+    console.log('상세내용 클릭:', url); // 디버깅용
+    if (url && url !== '#') {
+        window.open(url, '_blank', 'noopener,noreferrer');
+    } else {
+        console.log('URL이 설정되지 않았습니다');
+    }
+};
 </script>
 
 <template>
@@ -78,16 +88,18 @@ onUnmounted(() => {
                 >
                     <!-- 학습 자료 번호 -->
                     <span class="num">{{ port.num }}.</span>
-                    <!-- 학습 자료 이미지 링크 -->
-                    <a :href="port.view" target="_blank" class="img">
+                    <!-- 학습 자료 이미지 -->
+                    <div class="img">
                         <img :src="port.img" :alt="port.title" />
-                    </a>
+                    </div>
                     <!-- 학습 자료 제목 -->
                     <h3 class="title">{{ port.title }}</h3>
                     <!-- 학습 자료 설명 -->
                     <p class="desc">{{ port.desc }}</p>
-                    <!-- 사이트 보기 버튼 -->
-                    <a :href="port.view" target="_blank" class="site">사이트 보기</a>
+                    <!-- 상세내용 버튼 -->
+                    <button v-if="key !== 2" @click="openDetail(port.view)" class="detail-button">
+                        {{ key === 3 ? '해당 사이트 입니다' : '상세내용' }}
+                    </button>
                 </div>
             </div>
         </div>
@@ -271,4 +283,32 @@ onUnmounted(() => {
     .port__item .desc { font-size: 1rem; }
     /* 사이트 보기 버튼 스타일링 */
     .port__item .site { border: 1px solid var(--black100); display: block; text-align: center; padding: 0.625rem 1.5rem; margin-top: 1.5rem; }
+    
+    /* 상세내용 버튼 스타일링 */
+    .port__item .detail-button { 
+        border: 1px solid var(--black300); 
+        display: block; 
+        width: 100%;
+        text-align: center; 
+        padding: 0.625rem 1.5rem; 
+        margin-top: 1.5rem; 
+        background: transparent;
+        color: var(--black300);
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 400;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            border-color: var(--primary-color);
+            background: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+        
+        &:active {
+            transform: translateY(0);
+        }
+    }
 </style>

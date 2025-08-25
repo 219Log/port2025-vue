@@ -103,6 +103,11 @@ img {
     font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
 
+// 헤더 고정으로 인한 스크롤 오프셋 처리
+section {
+    scroll-margin-top: 95px; /* 헤더 높이 + 여유 공간 */
+}
+
 // 스킵메뉴
 #skip a {
     position: absolute;
