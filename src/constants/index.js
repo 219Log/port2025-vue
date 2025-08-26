@@ -4,7 +4,7 @@ import aws from "../assets/img/study/aws.png";
 import javaScript from "../assets/img/study/javaScript.png";
 import springBoot from "../assets/img/study/springBoot.png";
 import springFramework from "../assets/img/study/springFramework.png";
-import vue from "../assets/img/study/vue.png";
+import vue from "../assets/img/study/vue.jpg";
 
 export const headerNav = [
   { title: "Home", url: "#intro" },
@@ -193,20 +193,20 @@ export const portText = [
     },
     {
         num: "05",
-        title: "Java 객체지향 프로그래밍",
-        desc: "Java 객체지향 프로그래밍의 핵심 개념을 체계적으로 학습한 프로젝트입니다. 캡슐화, 상속, 다형성의 3대 특징과 생성자, 접근제어자, static, final 키워드를 실습했습니다. 메모리 구조 이해와 추상클래스, 인터페이스를 활용한 다형성 구현으로 역할과 구현의 분리를 통한 유연한 설계 원칙을 학습했습니다.",
+        title: "Spring Boot 핵심원리",
+        desc: "Spring Boot의 핵심 개념과 동작 원리를 심도 있게 학습한 프로젝트입니다. 자동 설정(Auto Configuration), 스타터(Starter), 임베디드 서버의 동작 방식을 이해하고, 의존성 주입과 IoC 컨테이너의 생명주기를 실습했습니다. 애노테이션 기반의 설정과 프로파일 관리, 액추에이터를 통한 모니터링까지 Spring Boot의 전반적인 생태계를 체계적으로 학습했습니다.",
         img: springBoot,
-        code: "#",
-        view: "#",
-        name: "Java OOP",
+        code: "https://blossom-lavender-c87.notion.site/spring-boot-basic-25a336a6961280f59f63dd1fbca26a4f?source=copy_link",
+        view: "https://blossom-lavender-c87.notion.site/spring-boot-basic-25a336a6961280f59f63dd1fbca26a4f?source=copy_link",
+        name: "Spring Boot 핵심원리",
     },    
     {
         num: "06",
         title: "mvc 프레임워크는 내 손에",
         desc: "Spring Framework의 핵심 아키텍처와 구조를 심도 있게 탐구한 종합적인 학습 프로젝트입니다. Model-View-Controller 패턴의 완벽한 이해를 바탕으로 의존성 주입(DI), 제어의 역전(IoC), 관점지향 프로그래밍(AOP)의 개념을 실무 수준에서 활용할 수 있게 되었습니다. @Controller, @Service, @Repository 어노테이션 기반의 계층 구조 설계를 통해 엔터프라이즈급 웹 애플리케이션 개발 방식을 체계적으로 학습했습니다.",
         img: springFramework,
-        code: "#",
-        view: "#",
+        code: "https://blossom-lavender-c87.notion.site/mvc-25a336a6961280acb661c00cc7a10183?source=copy_link",
+        view: "https://blossom-lavender-c87.notion.site/mvc-25a336a6961280acb661c00cc7a10183?source=copy_link",
         name: "Spring MVC Framework",
     }
 ];
