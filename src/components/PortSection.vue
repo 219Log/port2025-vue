@@ -278,11 +278,11 @@ const openDetail = (url, cardKey) => {
     .port__inner {
         padding: 16px; /* 내부 여백 */
     }
-    /* 학습 자료 제목 스타일링 - z-index 최적화 */
+    /* 학습 자료 제목 스타일링 - 웹은 원래대로, 모바일만 이력사항 스타일 */
     .port__title {
-        position: relative;
-        z-index: 100; // 모든 요소보다 위에 (최우선)
-        width: 100%;
+        position: relative; /* 웹에서는 원래대로 relative */
+        z-index: 100; // 최상위 레이어
+        width: 100%; /* 웹에서는 원래대로 전체 너비 */
         height: 5vw;
         font-size: 4vw;
         font-weight: 900;
@@ -293,7 +293,22 @@ const openDetail = (url, cardKey) => {
         border-bottom: 0.4vw solid var(--black100);
         margin-bottom: 16px;
         text-indent: -0.26vw;
-        background: transparent; // 투명 배경으로 복원
+        background: transparent; // 웹에서는 투명 배경
+        
+        /* 모바일에서만 이력사항과 동일한 스타일 적용 */
+        @media (max-width: 800px){ 
+            position: sticky; /* 모바일에서만 sticky */
+            top: 68px;
+            left: 0;
+            width: 100%;
+            margin-bottom: calc(10vw + 30px); /* 기존 간격에 30px 추가 */
+            font-size: 30px;
+            height: auto;
+            background-color: var(--mainBg-color); /* 모바일에서 배경색 추가 */
+            border-bottom: 3px solid var(--black100) !important; /* 모바일에서 선이 보이도록 강제 적용 */
+            line-height: 1.2; /* 줄간격을 줄여서 선이 텍스트에 더 가깝게 */
+            padding-bottom: 0; /* 여백 완전 제거 */
+        }
     }
     /* 학습 자료 제목 내 강조 텍스트 */
     .port__title em {

@@ -48,8 +48,8 @@ import { skillText } from "@/constants/index";
     line-height: 1.6;
     font-family: var(--mainKor-font);
     text-transform: uppercase;
-    color: var(--black100);
-    border-bottom: 0.4vw solid var(--black100); /* 하단 구분선 */
+    color: var(--black100); /* 검은색으로 복원 */
+    border-bottom: 0.4vw solid var(--black100); /* 하단 구분선도 검은색으로 */
 
     /* 모바일 화면에서의 제목 스타일 */
     @media (max-width: 800px){ 
