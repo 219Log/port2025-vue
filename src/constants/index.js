@@ -48,20 +48,11 @@ export const skillText = [
     • Database : Oracle, Tibero, SQL
     • Server : Linux, Ncloud, AWS S3 (파일 저장), JEUS
     • Version Control : Git, SVN, Redmine, Notion
-
+    
     학습 스킬 
     •Server-Side : java, spring boot, JPA, ORM, Node.js, mosquitto, Arduino(C++)
-    •Client-Side : Vue.js
     •Database : MySQL, H2, MongoDB
     •Server : Linux, AWS_EC2
-    ||
-    ||
-
-    필요 스킬
-    • Server-Side : Spring Framework
-    • Client-Side : Vue.js
-    •  Version Control : GitHub, Notion
-    •  Server : Linux, AWS_EC2, AWS_S3
     ` },
   {
     title: "개발 및 업무 영역",
