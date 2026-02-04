@@ -49,10 +49,13 @@ export const skillText = [
     • Server : Linux, Ncloud, AWS S3 (파일 저장), JEUS
     • Version Control : Git, SVN, Redmine, Notion
     
-    학습 스킬 
-    •Server-Side : java, spring boot, JPA, ORM, Node.js, mosquitto, Arduino(C++)
+    학습 스킬
+    •Server-Side : Java, Spring Boot, JPA, ORM, Node.js, Mosquitto, Arduino(C++), Python, FastAPI, Express, Uvicorn, TypeScript
     •Database : MySQL, H2, MongoDB
-    •Server : Linux, AWS_EC2
+    •Cloud/Infra : Linux, AWS EC2, Docker, Docker Compose, RunPod(GPU Serverless), NVIDIA CUDA, Vercel
+    •AI/ML : OpenAI API(GPT-4, GPT-4 Vision), Google Gemini API, PyTorch, Transformers, Diffusers, ComfyUI, FLUX.1-dev, Stable Diffusion
+    •Media Processing : FFmpeg, Pillow(PIL), Google Cloud TTS, Edge TTS
+    •DevOps/Tools : ESLint, Prettier, pytest, Pydantic, JWT Auth, Axios, HTTPX, aiohttp
     ` },
   {
     title: "개발 및 업무 영역",
