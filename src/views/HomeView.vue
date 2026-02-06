@@ -4,7 +4,7 @@ import HeaderSection from "@/components/HeaderSection.vue";
 import IntroSection from "@/components/IntroSection.vue";
 import SkillSection from "@/components/SkillSection.vue";
 import SiteSection from "@/components/SiteSection.vue";
-import PortSection from "@/components/PortSection.vue";
+import AiProjectSection from "@/components/AiProjectSection.vue";
 import ContactSection from "@/components/ContactSection.vue";
 import SkipSection from "@/components/SkipSection.vue";
 </script>
@@ -16,7 +16,7 @@ import SkipSection from "@/components/SkipSection.vue";
         <IntroSection />
         <SkillSection />
         <SiteSection />
-        <PortSection />
+        <AiProjectSection />
         <ContactSection />
     </main>
     <!-- <FooterSection /> --> <!-- 임시 주석 처리 -->
